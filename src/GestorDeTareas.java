@@ -20,7 +20,11 @@ public class GestorDeTareas {
                     System.out.println("Escribe la tarea:");
                     sc.nextLine();
                     String tarea = sc.nextLine();
-                    tareas.add(tarea);
+                    if (!tarea.trim().isEmpty()) {
+                        tareas.add(tarea);
+                    } else {
+                        System.out.println("La tarea no puede estar vacía.");
+                    }
                     break;
                 case 2:
                     System.out.println("Tareas: " + tareas);
