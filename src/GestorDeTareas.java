@@ -28,9 +28,14 @@ public class GestorDeTareas {
                     break;
                 case 2:
                     System.out.println("Tareas: " + tareas);
+                    System.out.println("Total: "+ contarTareas(tareas));
                     break;
             }
         } while (opcion != 3);
         sc.close();
+    }
+
+    public static int contarTareas(ArrayList<String> lista){
+        return lista.size();
     }
 }
